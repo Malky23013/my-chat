@@ -4,7 +4,7 @@ import OpenAI from 'openai';
 import axios from 'axios';
 
 function App() {
-  const openai = new OpenAI({ apiKey:'1234', dangerouslyAllowBrowser: true });
+  const openai = new OpenAI({ apiKey:'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', dangerouslyAllowBrowser: true });
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
   const [websiteAddress, setAddress] = useState('');
@@ -55,7 +55,7 @@ function App() {
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${'1234'}`
+            'Authorization': `Bearer ${'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'}`
           }
         }
       );
