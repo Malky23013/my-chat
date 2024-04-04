@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import OpenAI from 'openai';
 import axios from 'axios';
-
 function App() {
   const openai = new OpenAI({ apiKey:'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', dangerouslyAllowBrowser: true });
   const [question, setQuestion] = useState('');
