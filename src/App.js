@@ -2,8 +2,12 @@
 import React, { useState } from 'react';
 import OpenAI from 'openai';
 import axios from 'axios';
+import 'dotenv/config'
 function App() {
-  const openai = new OpenAI({ apiKey:'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', dangerouslyAllowBrowser: true });
+  require('dotenv').config()
+  console.log(process.env)
+  const apiKey=process.env.REACT_APP_API_KEY;
+  const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
   const [websiteAddress, setAddress] = useState('');
@@ -54,7 +58,7 @@ function App() {
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${'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'}`
+            'Authorization': `Bearer ${apiKey}`
           }
         }
       );
