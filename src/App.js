@@ -2,10 +2,7 @@
 import React, { useState } from 'react';
 import OpenAI from 'openai';
 import axios from 'axios';
-import 'dotenv/config'
 function App() {
-  require('dotenv').config()
-  console.log(process.env)
   const apiKey=process.env.REACT_APP_API_KEY;
   const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
   const [question, setQuestion] = useState('');
